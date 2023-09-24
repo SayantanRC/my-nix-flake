@@ -1,5 +1,6 @@
-{ config, pkgs, ... }: 
+{ config, pkgs, username, ... }: 
 {
+  homeDirectory = "/home/${username}";
   home.packages = with pkgs; [
     mpv
     gthumb
