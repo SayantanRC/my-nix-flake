@@ -129,6 +129,7 @@
   services.flatpak.enable = true;
   
   # https://discourse.nixos.org/t/confusion-about-proper-way-to-setup-flathub/29806/12?u=line0174
+  # https://fostips.com/remove-flatpak-repositories-linux/
   system.activationScripts = {
     flathub = ''
       /run/current-system/sw/bin/flatpak remote-add --system --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
