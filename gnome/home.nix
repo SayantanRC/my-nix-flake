@@ -21,6 +21,8 @@
     gnomeExtensions.blur-my-shell
     gnomeExtensions.desktop-icons-ng-ding
     # emoji copy ?
+    
+    simp1e-cursors
   ];
   
   
@@ -28,8 +30,14 @@
   # https://discourse.nixos.org/t/trouble-setting-gtk-and-qt-themes-with-hm-options/21227
   gtk = {
     enable = true;
-    iconTheme.name = "Papirus-Dark";
-    iconTheme.package = pkgs.papirus-icon-theme;
+    iconTheme = {
+      name = "Papirus-Dark";
+      package = pkgs.papirus-icon-theme;
+    };
+    cursorTheme = {
+      package = pkgs.simp1e-cursors;
+      name = "Simp1e";
+    };
   };
   
   nixpkgs.config.firefox.enableGnomeExtensions = true; 
