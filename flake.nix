@@ -1,6 +1,6 @@
 # cd "/mnt/linux_shared/my_nix_flake"
 # CONFIG=hp_gnome # example
-# nixos-rebuild build --impure --flake .#$CONFIG
+# nixos-rebuild build --flake .#$CONFIG
 # sudo nixos-rebuild switch --flake .#$CONFIG
 
 # Resources
@@ -25,7 +25,9 @@
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
   let
+    system = "x86_64-linux";
     pkgs = import nixpkgs {
+      inherit system;
       config = { 
         allowUnfree = true;
         permittedInsecurePackages = [
@@ -42,7 +44,7 @@
       # For my HP x360, with GNOME 44.2
       hp_gnome = nixpkgs.lib.nixosSystem {
       
-        system = "x86_64-linux";
+        inherit system;
         specialArgs = { inherit username stateVersion pkgs; };
         
         modules = [
@@ -73,7 +75,7 @@
       
       hp_plasma = nixpkgs.lib.nixosSystem {
       
-        system = "x86_64-linux";
+        inherit system;
         specialArgs = { inherit username stateVersion pkgs; };
         
         modules = [
