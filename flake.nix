@@ -91,6 +91,26 @@
           ./misc/my_dev_stuff.nix
         ];
       };
+      
+      hp_hyprland = nixpkgs.lib.nixosSystem {
+      
+        inherit system;
+        specialArgs = { inherit username stateVersion pkgs; };
+        
+        modules = [
+          
+          # ========== configs specific to HP x360 ==========
+          ./hardware/hp_x360.nix
+          ./misc/my_mount_points.nix
+          # ====================
+          
+          ./general/configuration.nix
+          ./hyprland/configuration.nix
+          
+          ./misc/my_dev_stuff.nix
+        ];
+      };
+      
     };
   };
 }
