@@ -128,6 +128,13 @@
   # Flatpak: https://nixos.wiki/wiki/Flatpak
   services.flatpak.enable = true;
   
+  # https://discourse.nixos.org/t/confusion-about-proper-way-to-setup-flathub/29806/12?u=line0174
+  system.activationScripts = {
+    flathub = ''
+      /run/current-system/sw/bin/flatpak remote-add --system --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+    '';
+  };
+  
   # List all packages in /etc/current-system-packages during rbuild.
   # https://www.reddit.com/r/NixOS/comments/fsummx/comment/fm45htj/?utm_source=share&utm_medium=web2x&context=3
   environment.etc."current-system-packages".text = let
