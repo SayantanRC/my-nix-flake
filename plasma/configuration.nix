@@ -1,10 +1,15 @@
 { config, pkgs, ... }:
 
 {
+
+  # Enable the Plasma Desktop Environment.
+  services.xserver.displayManager.sddm.enable = true;
+  services.xserver.desktopManager.plasma5.enable = true;
+  
+  
   # Enable default wayland on plasma
   services.xserver.displayManager.defaultSession = "plasmawayland";
 
-  # Add lightly theme
   environment.systemPackages = with pkgs; [
     lightly-qt
     libsForQt5.kalendar
