@@ -1,7 +1,7 @@
 # cd "/mnt/linux_shared/my_nix_flake"
 # CONFIG=hp_gnome # example
 # nixos-rebuild build --impure --flake .#$CONFIG
-# sudo nixos-rebuild switch --impure --flake .#$CONFIG
+# sudo nixos-rebuild switch --flake .#$CONFIG
 
 # Resources
 # https://www.tweag.io/blog/2020-07-31-nixos-flakes/
