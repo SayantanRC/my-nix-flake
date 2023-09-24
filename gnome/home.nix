@@ -247,7 +247,7 @@
         "flypie@schneegans.github.com"
         "transparent-top-bar@ftpix.com"
         "blur-my-shell@aunetx"
-        #"ding@rastersoft.com"
+        "ding@rastersoft.com"
         "emoji-copy@felipeftn"
         #"gnome-shell-screenshot@ttll.de"
       ];
