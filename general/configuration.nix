@@ -107,6 +107,7 @@
     busybox
     fuse
     tree
+    xdg-user-dirs
     
     # nixos
     nixos-option
