@@ -19,8 +19,10 @@
   ]);
   
   # https://search.nixos.org/options?channel=23.05&show=xdg.mime.defaultApplications
+  # To query type: xdg-mime query filetype filename.ext
   xdg.mime.defaultApplications = {
     "inode/directory" = "nemo.desktop";
+    "image/png" = "org.gnome.eog.desktop";
   };
   
   # =============== Enable GSConnect ===============
