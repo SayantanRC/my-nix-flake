@@ -96,10 +96,6 @@
     "org/gnome/gnome-session" = {
       logout-prompt=false;
     };
-      
-    "org/nemo/preferences/menu-config" = {
-      selection-menu-make-link=true;
-    };
     
     # =============== Key bindings ===============
     
@@ -251,7 +247,7 @@
         "emoji-copy@felipeftn"
         #"gnome-shell-screenshot@ttll.de"
       ];
-      favorite-apps=["org.gnome.Epiphany.desktop" "firefox.desktop" "org.gnome.Console.desktop" "nemo.desktop" "org.gnome.TextEditor.desktop"];
+      favorite-apps=["org.gnome.Epiphany.desktop" "firefox.desktop" "org.gnome.Console.desktop" "org.gnome.Nautilus.desktop" "org.gnome.TextEditor.desktop"];
     };
       
     "org/gnome/shell/extensions/gestureImprovements" = {
@@ -271,7 +267,6 @@
         (mkDictionaryEntry["org.gnome.Epiphany.desktop" (mkTuple[5 true])])
         (mkDictionaryEntry["org.gnome.TextEditor.desktop" (mkTuple[5 true])])
         (mkDictionaryEntry["org.gnome.Nautilus.desktop" (mkTuple[1 true])])
-        (mkDictionaryEntry["nemo.desktop" (mkTuple[1 true])])
         (mkDictionaryEntry["org.gnome.Console.desktop" (mkTuple[5 true])])
       ];
     };
@@ -356,7 +351,6 @@
       show-trash=false;
       show-volumes=true;
       start-corner="bottom-left";
-      use-nemo=true;
     };
       
     "org/gnome/shell/extensions/emoji-copy" = {

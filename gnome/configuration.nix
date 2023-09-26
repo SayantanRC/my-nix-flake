@@ -6,7 +6,6 @@
   services.xserver.desktopManager.gnome.enable = true;
   
   environment.systemPackages = with pkgs; [
-    cinnamon.nemo-with-extensions
     papirus-icon-theme
     gnome-extension-manager
     gjs
@@ -21,7 +20,7 @@
   # https://search.nixos.org/options?channel=23.05&show=xdg.mime.defaultApplications
   # To query type: xdg-mime query filetype filename.ext
   xdg.mime.defaultApplications = {
-    "inode/directory" = "nemo.desktop";
+    "inode/directory" = "org.gnome.Nautilus.desktop";
     "image/png" = "org.gnome.eog.desktop";
     "application/pdf" = "org.gnome.Evince.desktop";
   };
