@@ -23,6 +23,7 @@
   xdg.mime.defaultApplications = {
     "inode/directory" = "nemo.desktop";
     "image/png" = "org.gnome.eog.desktop";
+    "application/pdf" = "org.gnome.Evince.desktop";
   };
   
   # =============== Enable GSConnect ===============
