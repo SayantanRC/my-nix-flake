@@ -144,5 +144,11 @@
     formatted = builtins.concatStringsSep "\n" sortedUnique;
   in
     formatted;
+  
+  # Sudo exceptions
+  # https://github.com/NixOS/nixpkgs/issues/58276
+  security.sudo.extraConfig = ''
+    ${username}	ALL=(root)	NOPASSWD: /run/current-system/sw/bin/nixos-rebuild
+  '';
 
 }
