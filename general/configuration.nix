@@ -148,7 +148,7 @@
   # Sudo exceptions
   # https://github.com/NixOS/nixpkgs/issues/58276
   security.sudo.extraConfig = ''
-    ${username}	ALL=(root)	NOPASSWD: /run/current-system/sw/bin/nixos-rebuild
+    ${username}	ALL=(root)	NOPASSWD: /run/current-system/sw/bin/nixos-rebuild /run/current-system/sw/bin/nix-collect-garbage
   '';
 
 }
