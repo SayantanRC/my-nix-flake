@@ -7,7 +7,7 @@
     meld
     python311
     python311Packages.pip
-    postman
+    #postman
   ];
 
   # start ssh
