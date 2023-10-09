@@ -107,6 +107,7 @@
     busybox
     fuse
     tree
+    exfatprogs
     
     # nixos
     nixos-option
