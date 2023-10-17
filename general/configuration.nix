@@ -108,6 +108,7 @@
     fuse
     tree
     exfatprogs
+    p7zip
     
     # nixos
     nixos-option
