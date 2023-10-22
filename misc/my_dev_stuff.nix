@@ -8,6 +8,9 @@
     python311
     python311Packages.pip
     #postman
+    
+    # raspberry pi
+    rpi-imager
   ];
 
   # start ssh
