@@ -4,6 +4,7 @@
     gnomeExtensions.launch-new-instance
     gnomeExtensions.gesture-improvements
     #gnomeExtensions.pano
+    gnomeExtensions.clipboard-indicator
     gnomeExtensions.vitals
     gnomeExtensions.gsconnect
     gnomeExtensions.app-icons-taskbar
@@ -228,6 +229,7 @@
         "gestureImprovements@gestures"
         "launch-new-instance@gnome-shell-extensions.gcampax.github.com"
         #"pano@elhan.io"
+        "clipboard-indicator@tudmotu.com"
         "Vitals@CoreCoding.com"
         "gsconnect@andyholmes.github.io"
         "aztaskbar@aztaskbar.gitlab.com"
