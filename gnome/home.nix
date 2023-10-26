@@ -3,7 +3,7 @@
   home.packages = with pkgs; [
     gnomeExtensions.launch-new-instance
     gnomeExtensions.gesture-improvements
-    gnomeExtensions.pano
+    #gnomeExtensions.pano
     gnomeExtensions.vitals
     gnomeExtensions.gsconnect
     gnomeExtensions.app-icons-taskbar
@@ -227,7 +227,7 @@
       enabled-extensions = [
         "gestureImprovements@gestures"
         "launch-new-instance@gnome-shell-extensions.gcampax.github.com"
-        "pano@elhan.io"
+        #"pano@elhan.io"
         "Vitals@CoreCoding.com"
         "gsconnect@andyholmes.github.io"
         "aztaskbar@aztaskbar.gitlab.com"
@@ -271,16 +271,16 @@
       ];
     };
     
-    "org/gnome/shell/extensions/pano" = {
-      global-shortcut=["<Super>v"];
-      history-length=50;
-      paste-on-select=false;
-      play-audio-on-copy=false;
-      send-notification-on-copy=false;
-      window-height=300;
-      link-previews=false;
-      open-links-in-browser=false;
-    };
+    #"org/gnome/shell/extensions/pano" = {
+    #  global-shortcut=["<Super>v"];
+    #  history-length=50;
+    #  paste-on-select=false;
+    #  play-audio-on-copy=false;
+    #  send-notification-on-copy=false;
+    #  window-height=300;
+    #  link-previews=false;
+    #  open-links-in-browser=false;
+    #};
       
     "org/gnome/shell/extensions/vitals" = {
       alphabetize=true;
