@@ -283,6 +283,17 @@
     #  link-previews=false;
     #  open-links-in-browser=false;
     #};
+    
+    "org/gnome/shell/extensions/clipboard-indicator" = {
+      cache-size=16384;
+      clear-history=[];
+      disable-down-arrow=true;
+      history-size=30;
+      next-entry=[];
+      prev-entry=[];
+      preview-size=100;
+      toggle-menu=["<Super>v"];
+    };
       
     "org/gnome/shell/extensions/vitals" = {
       alphabetize=true;
