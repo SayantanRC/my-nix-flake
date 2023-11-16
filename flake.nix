@@ -40,6 +40,9 @@
   in
   {
     nixosConfigurations = {
+    
+    
+      # ========================== HP ==========================
       
       # For my HP x360, with GNOME 44.2
       hp_gnome = nixpkgs.lib.nixosSystem {
@@ -108,6 +111,46 @@
           ./hyprland/configuration.nix
           
           ./misc/my_dev_stuff.nix
+        ];
+      };
+      
+      
+      
+      
+      
+      
+      # ========================== ASUS ==========================
+      
+      
+      # For my ASUS X13, with GNOME 44.2
+      asus_gnome = nixpkgs.lib.nixosSystem {
+      
+        inherit system;
+        specialArgs = { inherit username stateVersion pkgs; };
+        
+        modules = [
+          
+          # ========== configs specific to HP x360 ==========
+          ./hardware/asus_x13.nix
+          #./misc/my_mount_points.nix
+          # ====================
+          
+          ./general/configuration.nix
+          ./gnome/configuration.nix
+          
+          ./misc/my_dev_stuff.nix
+          
+          home-manager.nixosModules.home-manager {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.${username} = {
+              home.stateVersion = stateVersion;
+              imports = [
+               ./general/home.nix
+               ./gnome/home.nix
+              ];
+            };
+          }
         ];
       };
       
