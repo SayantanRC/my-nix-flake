@@ -110,6 +110,7 @@
     exfatprogs
     p7zip
     stress
+    pv
     
     # nixos
     nixos-option
