@@ -112,6 +112,7 @@
     stress
     pv
     pciutils
+    lshw
     
     # nixos
     nixos-option
