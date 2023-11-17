@@ -66,4 +66,8 @@
 
     package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
+  
+  environment.systemPackages = with pkgs; [
+    ryzenadj
+  ];
 }
