@@ -68,6 +68,6 @@
   };
   
   environment.systemPackages = with pkgs; [
-    ryzenadj
+    amdgpu_top
   ];
 }
