@@ -130,10 +130,8 @@
         
         modules = [
           
-          # ========== configs specific to HP x360 ==========
           ./hardware/asus_x13.nix
           ./misc/my_mount_points.nix
-          # ====================
           
           ./general/configuration.nix
           ./gnome/configuration.nix
@@ -146,6 +144,7 @@
             home-manager.users.${username} = {
               home.stateVersion = stateVersion;
               imports = [
+               ./gnome/asus_x13.home.nix
                ./general/home.nix
                ./gnome/home.nix
               ];
