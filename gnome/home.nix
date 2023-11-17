@@ -155,13 +155,13 @@
     };
 
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom5" = {
-      binding="Print";
+      binding="F4";
       command="flameshot full -c";
       name="Fullscreen screenshot";
     };
 
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom6" = {
-      binding="<Shift>Print";
+      binding="<Shift>F4";
       command="flameshot gui -c";
       name="Partial screenshot";
     };
