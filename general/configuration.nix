@@ -111,6 +111,7 @@
     p7zip
     stress
     pv
+    pciutils
     
     # nixos
     nixos-option
@@ -123,7 +124,6 @@
     gparted
     gnome.dconf-editor
     etcher
-    gpu-viewer
   ];
   
   # May enable tap to click by default.
