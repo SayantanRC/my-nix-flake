@@ -65,6 +65,11 @@
     nvidiaSettings = true;
 
     package = config.boot.kernelPackages.nvidiaPackages.stable;
+    
+    prime = {
+      amdgpuBusId = "PCI:8:0:0";
+      nvidiaBusId = "PCI:1:0:0";
+    };
   };
   
   environment.systemPackages = with pkgs; [
