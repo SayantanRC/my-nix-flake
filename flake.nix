@@ -132,7 +132,7 @@
           
           # ========== configs specific to HP x360 ==========
           ./hardware/asus_x13.nix
-          #./misc/my_mount_points.nix
+          ./misc/my_mount_points.nix
           # ====================
           
           ./general/configuration.nix
