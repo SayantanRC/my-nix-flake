@@ -45,6 +45,9 @@
     };
   };
   
+  programs.rog-control-center.enable = true;
+  programs.rog-control-center.autoStart = true;
+  
   hardware.opengl = {
     enable = true;
     driSupport = true;
