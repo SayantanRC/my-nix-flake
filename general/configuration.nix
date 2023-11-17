@@ -123,6 +123,7 @@
     gparted
     gnome.dconf-editor
     etcher
+    gpu-viewer
   ];
   
   # May enable tap to click by default.
