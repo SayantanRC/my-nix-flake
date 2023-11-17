@@ -109,6 +109,7 @@
     tree
     exfatprogs
     p7zip
+    stress
     
     # nixos
     nixos-option
