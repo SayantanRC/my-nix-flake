@@ -17,7 +17,7 @@
     };
 
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom100" = {
-      binding="F5";
+      binding="XF86Launch4";
       command="asusctl profile -n";
       name="Performance profile toggle";
     };
