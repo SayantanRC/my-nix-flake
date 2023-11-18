@@ -75,6 +75,11 @@
     };
   };
   
+  hardware = {
+    sensor.iio.enable = true;
+    enableRedistributableFirmware = true;
+  };
+  
   environment.systemPackages = with pkgs; [
     amdgpu_top
   ];
