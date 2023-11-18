@@ -84,7 +84,9 @@
     amdgpu_top
   ];
   
-  environment.sessionVariables = {
-    STEAM_FORCE_DESKTOPUI_SCALING = "3";
-  };
+  # commenting it out because we will run Steam from flatpak.
+  # Add this to flatseal: STEAM_FORCE_DESKTOPUI_SCALING=3.0
+  #environment.sessionVariables = {
+  #  STEAM_FORCE_DESKTOPUI_SCALING = "3";
+  #};
 }
