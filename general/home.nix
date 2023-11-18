@@ -24,6 +24,7 @@
     google-chrome
     qbittorrent
     localsend
+    cinnamon.warpinator
     onboard
     android-tools
     # For flatpak
