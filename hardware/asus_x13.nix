@@ -83,4 +83,8 @@
   environment.systemPackages = with pkgs; [
     amdgpu_top
   ];
+  
+  environment.sessionVariables = {
+    STEAM_FORCE_DESKTOPUI_SCALING = "3";
+  };
 }
