@@ -49,7 +49,7 @@
       hp_gnome = nixpkgs.lib.nixosSystem {
       
         inherit system;
-        specialArgs = { inherit username stateVersion pkgs; };
+        specialArgs = { inherit username stateVersion pkgs inputs; };
         
         modules = [
           
@@ -80,7 +80,7 @@
       hp_plasma = nixpkgs.lib.nixosSystem {
       
         inherit system;
-        specialArgs = { inherit username stateVersion pkgs; };
+        specialArgs = { inherit username stateVersion pkgs inputs; };
         
         modules = [
           
@@ -99,7 +99,7 @@
       hp_hyprland = nixpkgs.lib.nixosSystem {
       
         inherit system;
-        specialArgs = { inherit username stateVersion pkgs; };
+        specialArgs = { inherit username stateVersion pkgs inputs; };
         
         modules = [
           
@@ -127,7 +127,7 @@
       asus_gnome = nixpkgs.lib.nixosSystem {
       
         inherit system;
-        specialArgs = { inherit username stateVersion pkgs; };
+        specialArgs = { inherit username stateVersion pkgs inputs; };
         
         modules = [
           
@@ -135,13 +135,13 @@
           ./misc/my_mount_points.nix
           
           ./general/configuration.nix
-          ./general/xremap.nix
           ./gnome/configuration.nix
           
           ./misc/my_dev_stuff.nix
           
+          ./general/xremap.nix
+          
           home-manager.nixosModules.home-manager {
-            home-manager.extraSpecialArgs = { inherit inputs username; };
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.${username} = {
