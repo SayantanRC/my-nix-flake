@@ -21,6 +21,7 @@
       url = "github:nix-community/home-manager/release-23.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    xremap-flake.url = "github:xremap/nix-flake";
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
@@ -134,11 +135,13 @@
           ./misc/my_mount_points.nix
           
           ./general/configuration.nix
+          ./general/xremap.nix
           ./gnome/configuration.nix
           
           ./misc/my_dev_stuff.nix
           
           home-manager.nixosModules.home-manager {
+            home-manager.extraSpecialArgs = { inherit inputs username; };
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.${username} = {
