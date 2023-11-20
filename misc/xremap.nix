@@ -12,8 +12,8 @@
         {
           name = "Global";
           remap = {
-            "RightAlt-Right" = "End";
-            "RightAlt-Left" = "Home";
+            "RightAlt-RightBrace" = "End";
+            "RightAlt-LeftBrace" = "Home";
             "Shift-Win-S" = "Shift-Print";
           };
         }
