@@ -60,7 +60,7 @@
 
     modesetting.enable = true;
 
-    powerManagement.enable = true;
+    powerManagement.enable = false;
     powerManagement.finegrained = false;
 
     open = false;
