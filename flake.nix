@@ -64,6 +64,7 @@
           ./misc/my_dev_stuff.nix
           
           home-manager.nixosModules.home-manager {
+            home-manager.extraSpecialArgs = { inherit username stateVersion inputs; };
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.${username} = {
@@ -140,6 +141,7 @@
           ./misc/my_dev_stuff.nix
           
           home-manager.nixosModules.home-manager {
+            home-manager.extraSpecialArgs = { inherit username stateVersion inputs; };
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.${username} = {

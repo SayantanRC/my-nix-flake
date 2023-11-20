@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, username, ... }:
 {
   home.packages = with pkgs; [
     gnomeExtensions.launch-new-instance
