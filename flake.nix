@@ -139,8 +139,6 @@
           
           ./misc/my_dev_stuff.nix
           
-          ./general/xremap.nix
-          
           home-manager.nixosModules.home-manager {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
