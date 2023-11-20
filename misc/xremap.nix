@@ -14,6 +14,7 @@
           remap = {
             "RightAlt-Right" = "End";
             "RightAlt-Left" = "Home";
+            "Shift-Win-S" = "Shift-Print";
           };
         }
       ];
