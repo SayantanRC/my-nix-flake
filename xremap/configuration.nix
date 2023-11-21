@@ -7,6 +7,7 @@
   
   services.xremap = {
     userName = "${username}";
+    withGnome = true;
     yamlConfig = ''
     keymap:
       - name: Home-End keys
@@ -25,6 +26,12 @@
               Shift-Win-S: Print
               S: Print
               P: Shift-Print
+              
+      - name: Nautilus
+        remap:
+          Backspace: AltLeft-Left
+        application:
+          only: org.gnome.Nautilus
     '';
   };
 }
