@@ -9,8 +9,12 @@
     userName = "${username}";
     yamlConfig = ''
     keymap:
-      - name: Global
+      - name: Home-End keys
         remap:
+          RightAlt-Right: End
+          RightAlt-Left: Home
+          RightAlt-Up: PageUp
+          RightAlt-Down: PageDown
           RightAlt-RightBrace: End
           RightAlt-LeftBrace: Home
           RightShift-LeftBrace: Shift-Home
