@@ -17,6 +17,26 @@
     gnome-characters
   ]);
   
+  # To query type: xdg-mime query filetype filename.ext
+  # Another example: xdg-mime query default "image/*"
+  xdg.mime = {
+    enable = true;
+    defaultApplications = {
+      "image/png" = [ "org.gnome.eog.desktop" ];
+      "image/bmp" = [ "org.gnome.eog.desktop" ];
+      "image/jpg" = [ "org.gnome.eog.desktop" ];
+      "image/jpeg" = [ "org.gnome.eog.desktop" ];
+      "inode/directory" = [ "org.gnome.Nautilus.desktop" ];
+      "application/pdf" = [ "org.gnome.Evince.desktop" ];
+    };
+    removedAssociations = {
+      "image/png" = [ "google-chrome.desktop" ];
+      "image/bmp" = [ "google-chrome.desktop" ];
+      "image/jpg" = [ "google-chrome.desktop" ];
+      "image/jpeg" = [ "google-chrome.desktop" ];
+    };
+  };
+  
   # =============== Enable GSConnect ===============
   # To use GSConnect, we need to enable some ports.
   # https://github.com/NixOS/nixpkgs/issues/116388

@@ -26,27 +26,6 @@
     simp1e-cursors
   ];
   
-  # https://discourse.nixos.org/t/set-default-application-for-mime-type-with-home-manager/17190/4
-  # To query type: xdg-mime query filetype filename.ext
-  # Another example: xdg-mime query default "image/*"
-  xdg.mimeApps = {
-    enable = true;
-    defaultApplications = {
-      "image/png" = [ "org.gnome.eog.desktop" ];
-      "image/bmp" = [ "org.gnome.eog.desktop" ];
-      "image/jpg" = [ "org.gnome.eog.desktop" ];
-      "image/jpeg" = [ "org.gnome.eog.desktop" ];
-      "inode/directory" = [ "org.gnome.Nautilus.desktop" ];
-      "application/pdf" = [ "org.gnome.Evince.desktop" ];
-    };
-    associations.removed = {
-      "image/png" = [ "google-chrome.desktop" ];
-      "image/bmp" = [ "google-chrome.desktop" ];
-      "image/jpg" = [ "google-chrome.desktop" ];
-      "image/jpeg" = [ "google-chrome.desktop" ];
-    };
-  };
-  
   
   # https://www.reddit.com/r/NixOS/comments/ytr2h7/set_system_icons_with_homemanager/
   # https://discourse.nixos.org/t/trouble-setting-gtk-and-qt-themes-with-hm-options/21227
