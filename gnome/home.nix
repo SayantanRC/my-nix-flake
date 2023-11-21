@@ -392,6 +392,10 @@
       emoji-keybinding=["<Super>period"];
       use-keybinding=true;
     };
+    
+    "org/gnome/shell/extensions/date-menu-formatter" = {
+      pattern="EEE, MMM d  H : mm : ss";
+    };
 
   };  
 }
