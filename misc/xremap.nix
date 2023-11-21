@@ -7,17 +7,13 @@
   
   services.xremap = {
     userName = "${username}";
-    config = {
-      keymap = [
-        {
-          name = "Global";
-          remap = {
-            "RightAlt-RightBrace" = "End";
-            "RightAlt-LeftBrace" = "Home";
-            "Shift-Win-S" = "Shift-Print";
-          };
-        }
-      ];
-    };
+    yamlConfig = ''
+      keymap:
+        - name: Global
+          remap:
+            RightAlt-RightBrace: End
+            RightAlt-LeftBrace: Home
+            Shift-Win-S: Shift-Print
+    '';
   };
 }
