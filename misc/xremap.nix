@@ -13,6 +13,8 @@
         remap:
           RightAlt-RightBrace: End
           RightAlt-LeftBrace: Home
+          RightShift-LeftBrace: Shift-Home
+          RightShift-RightBrace: Shift-End
           Shift-Win-S: Shift-Print
     '';
   };
