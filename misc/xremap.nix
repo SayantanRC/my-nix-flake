@@ -17,8 +17,6 @@
           RightAlt-Down: PageDown
           RightAlt-RightBrace: End
           RightAlt-LeftBrace: Home
-          RightShift-LeftBrace: Shift-Home
-          RightShift-RightBrace: Shift-End
           
       - name: Screenshots
         remap:
