@@ -17,14 +17,6 @@
     gnome-characters
   ]);
   
-  # https://search.nixos.org/options?channel=23.05&show=xdg.mime.defaultApplications
-  # To query type: xdg-mime query filetype filename.ext
-  xdg.mime.defaultApplications = {
-    "inode/directory" = "org.gnome.Nautilus.desktop";
-    "image/*" = "org.gnome.eog.desktop";
-    "application/pdf" = "org.gnome.Evince.desktop";
-  };
-  
   # =============== Enable GSConnect ===============
   # To use GSConnect, we need to enable some ports.
   # https://github.com/NixOS/nixpkgs/issues/116388
