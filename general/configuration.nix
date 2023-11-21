@@ -60,7 +60,7 @@
     description = username;
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-      firefox
+      firefox-bin
     ];
   };
 
