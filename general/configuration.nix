@@ -161,9 +161,5 @@
     ${username}	ALL=(root)	NOPASSWD: /run/current-system/sw/bin/nixos-rebuild
     ${username}	ALL=(root)	NOPASSWD: /run/current-system/sw/bin/nix-collect-garbage
   '';
-  
-  imports = [
-    ../misc/xremap.nix
-  ];
 
 }

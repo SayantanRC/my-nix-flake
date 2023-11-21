@@ -63,6 +63,8 @@
           
           ./misc/my_dev_stuff.nix
           
+          ./xremap/configuration.nix
+          
           home-manager.nixosModules.home-manager {
             home-manager.extraSpecialArgs = { inherit username stateVersion inputs; };
             home-manager.useGlobalPkgs = true;
@@ -72,6 +74,7 @@
               imports = [
                ./general/home.nix
                ./gnome/home.nix
+               ./xremap/gnome.nix
               ];
             };
           }
@@ -94,6 +97,8 @@
           ./plasma/configuration.nix
           
           ./misc/my_dev_stuff.nix
+          
+          ./xremap/configuration.nix
         ];
       };
       
@@ -113,6 +118,8 @@
           ./hyprland/configuration.nix
           
           ./misc/my_dev_stuff.nix
+          
+          ./xremap/configuration.nix
         ];
       };
       
@@ -140,6 +147,8 @@
           
           ./misc/my_dev_stuff.nix
           
+          ./xremap/configuration.nix
+          
           home-manager.nixosModules.home-manager {
             home-manager.extraSpecialArgs = { inherit username stateVersion inputs; };
             home-manager.useGlobalPkgs = true;
@@ -150,6 +159,7 @@
                ./gnome/asus_x13.home.nix
                ./general/home.nix
                ./gnome/home.nix
+               ./xremap/gnome.nix
               ];
             };
           }
