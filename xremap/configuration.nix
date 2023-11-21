@@ -26,12 +26,6 @@
               Shift-Win-S: Print
               S: Print
               P: Shift-Print
-              
-      - name: Nautilus
-        remap:
-          Backspace: LeftAlt-Left
-        application:
-          only: org.gnome.Nautilus
     '';
   };
 }
