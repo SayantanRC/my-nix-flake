@@ -21,7 +21,7 @@
   # To query type: xdg-mime query filetype filename.ext
   xdg.mime.defaultApplications = {
     "inode/directory" = "org.gnome.Nautilus.desktop";
-    "image/png" = "org.gnome.eog.desktop";
+    "image/*" = "org.gnome.eog.desktop";
     "application/pdf" = "org.gnome.Evince.desktop";
   };
   
