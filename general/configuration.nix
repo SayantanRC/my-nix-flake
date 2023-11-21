@@ -67,6 +67,10 @@
   system.stateVersion = stateVersion; # Did you read the comment?
   
   # ================== more general configs ==================
+  
+  nix.extraOptions = ''
+    experimental-features = nix-command flakes
+  '';
 
   # NTFS support: https://nixos.wiki/wiki/NTFS
   boot.supportedFilesystems = [ "ntfs" ];
