@@ -15,7 +15,14 @@
           RightAlt-LeftBrace: Home
           RightShift-LeftBrace: Shift-Home
           RightShift-RightBrace: Shift-End
-          Shift-Win-S: Shift-Print
+          
+      - name: Screenshots
+        remap:
+          Shift-Win-S:
+            remap:
+              Shift-Win-S: Print
+              S: Print
+              P: Shift-Print
     '';
   };
 }
