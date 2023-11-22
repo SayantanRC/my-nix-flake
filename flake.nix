@@ -74,7 +74,7 @@
               imports = [
                ./general/home.nix
                ./gnome/home.nix
-               ./xremap/gnome.nix
+               #./xremap/gnome.nix
               ];
             };
           }
@@ -159,7 +159,7 @@
                ./gnome/asus_x13.home.nix
                ./general/home.nix
                ./gnome/home.nix
-               ./xremap/gnome.nix
+               #./xremap/gnome.nix
               ];
             };
           }

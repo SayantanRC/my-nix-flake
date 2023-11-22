@@ -7,7 +7,7 @@
   
   services.xremap = {
     userName = "${username}";
-    withGnome = true;
+    #withGnome = true;
     yamlConfig = ''
     keymap:
       - name: Home-End keys
