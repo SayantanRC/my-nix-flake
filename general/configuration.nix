@@ -129,6 +129,7 @@
     gparted
     gnome.dconf-editor
     etcher
+    pavucontrol
   ];
   
   # May enable tap to click by default.
