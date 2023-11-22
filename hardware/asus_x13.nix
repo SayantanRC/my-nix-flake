@@ -34,6 +34,12 @@
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+  
+  # get newest kernel
+  #boot.kernelPackages = pkgs.linuxPackages_latest;
+  # using 6.5 as per this post:
+  # https://pay.reddit.com/r/NixOS/comments/17lcp1j/nixos_update_on_unstable_stopping_on_nvidia_driver/
+  boot.kernelPackages = pkgs.linuxPackages_6_5;
 
   # asus-linux
   services.supergfxd.enable = true;
