@@ -8,9 +8,8 @@
   services.xremap = {
     userName = "${username}";
     # enable watch: https://github.com/k0kubun/xremap/issues/371
-    watch = true;
+    #watch = true; # does not work anyway
     withGnome = true;
-    deviceName = "Keyboard";
     yamlConfig = ''
     keymap:
       - name: Home-End keys
@@ -30,5 +29,13 @@
               S: Print
               P: Shift-Print
     '';
+  };
+  
+  # Enable cron service to restart xremap on boot, because often times it fails to detect keyboard, even if watch is enabled.
+  services.cron = {
+    enable = true;
+    systemCronJobs = [
+      "@reboot    root    sleep 5 && systemctl restart xremap.service"
+    ];
   };
 }
