@@ -130,6 +130,7 @@
     gnome.dconf-editor
     etcher
     pavucontrol
+    telegram-desktop
   ];
   
   # May enable tap to click by default.
