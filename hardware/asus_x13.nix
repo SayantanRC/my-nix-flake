@@ -39,7 +39,7 @@
   #boot.kernelPackages = pkgs.linuxPackages_latest;
   # using 6.5 as per this post:
   # https://pay.reddit.com/r/NixOS/comments/17lcp1j/nixos_update_on_unstable_stopping_on_nvidia_driver/
-  #boot.kernelPackages = pkgs.linuxPackages_6_5;
+  boot.kernelPackages = pkgs.linuxPackages_6_5;
   
   # https://github.com/Quoteme/nixos/blob/nixos_23.05/hardware/asusROGFlowX13.nix
   # https://github.com/camillemndn/nixos-config/blob/f71c2b099bec17ceb8a894f099791447deac70bf/hardware/asus/gv301qe/default.nix#L46
@@ -107,4 +107,7 @@
   #environment.sessionVariables = {
   #  STEAM_FORCE_DESKTOPUI_SCALING = "3";
   #};
+
+  # make the entries bigger than ant-size text.
+  boot.loader.systemd-boot.consoleMode = "1";
 }
