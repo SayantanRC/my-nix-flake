@@ -10,6 +10,7 @@
     # enable watch: https://github.com/k0kubun/xremap/issues/371
     watch = true;
     withGnome = true;
+    deviceName = "Keyboard";
     yamlConfig = ''
     keymap:
       - name: Home-End keys
