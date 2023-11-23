@@ -336,9 +336,9 @@
     "org/gnome/shell/extensions/just-perfection" = {
       activities-button=false;
       app-menu=false;
-      app-menu-icon=false;
+      app-menu-icon=true;
       app-menu-label=false;
-      show-apps-button=false;
+      show-apps-button=true;
       weather=false;
       window-demands-attention-focus=true;
       world-clock=false;
