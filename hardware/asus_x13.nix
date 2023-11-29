@@ -35,6 +35,10 @@
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
   
+  # Various links:
+  # https://github.com/Quoteme/nixos/blob/nixos_23.05/hardware/asusROGFlowX13.nix
+  # https://github.com/camillemndn/nixos-config/blob/main/hardware/asus/gv301qe/default.nix
+
   # get newest kernel
   #boot.kernelPackages = pkgs.linuxPackages_latest;
   # using 6.5 as per this post:
@@ -54,7 +58,17 @@
   }];
 
   # asus-linux
-  services.supergfxd.enable = true;
+  services.supergfxd = {
+    enable = true;
+    settings = {
+      vfio_enable = true;
+      vfio_save = false;
+      always_reboot = false;
+      no_logind = false;
+      logout_timeout_s = 30;
+      hotplug_type = "Asus";
+    };
+  }
 
   services = {
     asusd = {
