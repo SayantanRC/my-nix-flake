@@ -68,7 +68,7 @@
       logout_timeout_s = 30;
       hotplug_type = "Asus";
     };
-  }
+  };
 
   services = {
     asusd = {
