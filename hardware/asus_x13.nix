@@ -70,6 +70,8 @@
     };
   };
 
+  systemd.services.supergfxd.path = [ pkgs.kmod pkgs.pciutils ];
+
   services = {
     asusd = {
       enable = true;
@@ -102,6 +104,8 @@
     package = config.boot.kernelPackages.nvidiaPackages.stable;
     
     prime = {
+      offload.enable = true;
+      offload.enableOffloadCmd = true;
       amdgpuBusId = "PCI:8:0:0";
       nvidiaBusId = "PCI:1:0:0";
     };
