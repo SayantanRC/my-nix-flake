@@ -20,14 +20,8 @@
           RightAlt-Down: PageDown
           RightAlt-RightBrace: End
           RightAlt-LeftBrace: Home
-          
-      - name: Screenshots
-        remap:
-          Shift-Win-S:
-            remap:
-              Shift-Win-S: Print
-              S: Print
-              P: Shift-Print
+          Shift-Win-S: Shift-Print
+          Alt-Win-S: Print
     '';
   };
   
