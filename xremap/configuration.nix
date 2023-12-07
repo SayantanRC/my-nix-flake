@@ -21,7 +21,7 @@
           RightAlt-RightBrace: End
           RightAlt-LeftBrace: Home
           Shift-Win-S: Shift-Print
-          Alt-Win-S: Print
+          Shift-Alt-S: Print
     '';
   };
   
