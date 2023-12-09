@@ -241,7 +241,6 @@
         "expandable-notifications@kaan.g.inam.org"
         "just-perfection-desktop@just-perfection"
         #"material-you-theme@asubbiah.com"
-        "date-menu-formatter@marcinjakubowski.github.com"
         "flypie@schneegans.github.com"
         "transparent-top-bar@ftpix.com"
         "blur-my-shell@aunetx"
@@ -370,10 +369,6 @@
       always-show=true;
       emoji-keybinding=["<Super>period"];
       use-keybinding=true;
-    };
-    
-    "org/gnome/shell/extensions/date-menu-formatter" = {
-      pattern="EEE, MMM d  H : mm : ss";
     };
 
   };  
