@@ -66,6 +66,7 @@
       # Disable default hot corner
       # https://askubuntu.com/a/1097397
       enable-hot-corners = false;
+      clock-show-seconds=true
     };
     
     # Enable dark mode in root apps by default
