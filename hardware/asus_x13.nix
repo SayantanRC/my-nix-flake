@@ -14,12 +14,12 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/a8e14eda-165e-48f2-8bd0-d281f5995de6";
+    { device = "/dev/disk/by-label/nixos";
       fsType = "ext4";
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/86E3-0F50";
+    { device = "/dev/disk/by-label/SYSTEM";
       fsType = "vfat";
     };
 
