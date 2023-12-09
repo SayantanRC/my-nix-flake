@@ -74,6 +74,10 @@
       clock-show-weekday = true;
     };
     
+    "org/gnome/desktop/calendar" = {
+      show-weekdate = true;
+    };
+    
     # https://askubuntu.com/a/1481560
     "org/gnome/mutter" = {
       dynamic-workspaces = false;
