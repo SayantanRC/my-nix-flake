@@ -334,7 +334,7 @@
     };
       
     "org/gnome/shell/extensions/just-perfection" = {
-      activities-button=false;
+      activities-button=true;
       app-menu=false;
       app-menu-icon=true;
       app-menu-label=false;
