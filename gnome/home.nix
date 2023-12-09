@@ -63,16 +63,15 @@
       # Enable dark mode by default
       # https://askubuntu.com/a/1403780
       color-scheme = "prefer-dark";
+      # Enable dark mode in root apps by default
+      # To reset: gsettings reset org.gnome.desktop.interface gtk-theme
+      gtk-theme = "Adwaita-dark";
       # Disable default hot corner
       # https://askubuntu.com/a/1097397
       enable-hot-corners = false;
-      clock-show-seconds=true;
-    };
-    
-    # Enable dark mode in root apps by default
-    # To reset: gsettings reset org.gnome.desktop.interface gtk-theme
-    "org/gnome/desktop/interface" = {
-      gtk-theme = "Adwaita-dark";
+      # Show seconds and weekday
+      clock-show-seconds = true;
+      clock-show-weekday = true;
     };
     
     # https://askubuntu.com/a/1481560
@@ -86,12 +85,6 @@
     "org/gnome/desktop/wm/preferences" = {
       button-layout = ":minimize,maximize,close";
       num-workspaces = 4;
-    };
-
-    # Show seconds and weekday
-    "org/gnome/desktop/interface" = {
-      clock-show-seconds = false;
-      clock-show-weekday = true;
     };
       
     # prevent showing poweroff / reboot / logout confirmation
