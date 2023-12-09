@@ -15,10 +15,10 @@
   
   inputs = {
     nixpkgs = { 
-      url = "github:NixOS/nixpkgs/nixos-23.05";
+      url = "github:NixOS/nixpkgs/nixos-23.11";
     };
     home-manager = {
-      url = "github:nix-community/home-manager/release-23.05";
+      url = "github:nix-community/home-manager/release-23.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     xremap-flake.url = "github:xremap/nix-flake";
@@ -33,6 +33,7 @@
         allowUnfree = true;
         permittedInsecurePackages = [
           "electron-12.2.3"
+          "electron-19.1.9"
         ];
       };
     };
