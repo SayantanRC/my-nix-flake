@@ -22,10 +22,10 @@
   xdg.mime = {
     enable = true;
     defaultApplications = {
-      "image/png" = [ "org.gnome.eog.desktop" ];
-      "image/bmp" = [ "org.gnome.eog.desktop" ];
-      "image/jpg" = [ "org.gnome.eog.desktop" ];
-      "image/jpeg" = [ "org.gnome.eog.desktop" ];
+      "image/png" = [ "org.gnome.Loupe.desktop" ];
+      "image/bmp" = [ "org.gnome.Loupe.desktop" ];
+      "image/jpg" = [ "org.gnome.Loupe.desktop" ];
+      "image/jpeg" = [ "org.gnome.Loupe.desktop" ];
       "inode/directory" = [ "org.gnome.Nautilus.desktop" ];
       "application/pdf" = [ "org.gnome.Evince.desktop" ];
     };
