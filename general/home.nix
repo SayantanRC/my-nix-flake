@@ -1,5 +1,13 @@
 { config, pkgs, ... }: 
-{
+
+let
+
+  # https://github.com/flameshot-org/flameshot/issues/3365#issuecomment-1817581463
+  fixflameshot = pkgs.writeShellScriptBin "fixflameshot" ''
+    env QT_QPA_PLATFORM=wayland flameshot "$@"
+  '';
+
+in {
   # https://the-empire.systems/nixos-gnome-settings-and-keyboard-shortcuts
   
   # https://forum.manjaro.org/t/please-help-all-files-in-home-name-immediately-appear-on-desktop/28173/2
@@ -29,6 +37,9 @@
     android-tools
     # For flatpak
     gnome.gnome-software
+
+    # scripts
+    fixflameshot
   ];
   
   # https://nix-community.github.io/home-manager/options.html#opt-services.flameshot.settings
