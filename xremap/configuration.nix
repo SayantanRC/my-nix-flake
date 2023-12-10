@@ -10,6 +10,7 @@
     # enable watch: https://github.com/k0kubun/xremap/issues/371
     #watch = true; # does not work anyway
     withGnome = true;
+    serviceMode = "user";
     yamlConfig = ''
     keymap:
       - name: Home-End keys
@@ -22,6 +23,12 @@
           RightAlt-LeftBrace: Home
           Shift-Win-S: Shift-Print
           Shift-Alt-S: Print
+      
+      - name: Nautilus
+        remap:
+          Backspace: LeftAlt-Left
+        application:
+          only: org.gnome.Nautilus
     '';
   };
   
