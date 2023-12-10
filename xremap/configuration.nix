@@ -21,6 +21,9 @@
           RightAlt-Down: PageDown
           RightAlt-RightBrace: End
           RightAlt-LeftBrace: Home
+
+      - name: Screenshots
+        remap:
           Shift-Win-S: Shift-Print
           Shift-Alt-S: Print
       
