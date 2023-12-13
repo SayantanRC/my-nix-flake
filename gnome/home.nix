@@ -21,7 +21,7 @@
     gnomeExtensions.transparent-top-bar-adjustable-transparency
     gnomeExtensions.blur-my-shell
     gnomeExtensions.desktop-icons-ng-ding
-    # emoji copy ?
+    gnomeExtensions.emoji-copy
     
     simp1e-cursors
   ];
