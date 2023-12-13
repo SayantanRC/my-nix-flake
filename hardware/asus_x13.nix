@@ -121,7 +121,13 @@
   ];
   
   # commenting it out because we will run Steam from flatpak.
-  # Add this to flatseal: STEAM_FORCE_DESKTOPUI_SCALING=3.0
+  # Install Flatseal and open entry for Steam.
+  # Add this under "Environment": STEAM_FORCE_DESKTOPUI_SCALING=3.0
+  # In addition to this, under "Filesystem" -> "Other files"
+  # add "/mnt/linux_shared/steam_lib" (without quotes).
+  # Now open Steam. Under Steam -> Settings -> Storage,
+  # click on dropdown -> Add drive -> choose the location.
+  #
   #environment.sessionVariables = {
   #  STEAM_FORCE_DESKTOPUI_SCALING = "3";
   #};
