@@ -11,7 +11,7 @@
     gnomeExtensions.appindicator
     gnomeExtensions.caffeine
     gnomeExtensions.nothing-to-say
-    # Do not disturb while screen sharing or recording ?
+    gnomeExtensions.do-not-disturb-while-screen-sharing-or-recording
     gnomeExtensions.no-overview
     gnomeExtensions.expandable-notifications
     gnomeExtensions.just-perfection
