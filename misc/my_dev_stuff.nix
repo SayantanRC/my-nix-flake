@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, username, ... }:
 
 {
   environment.systemPackages = with pkgs; [
@@ -16,4 +16,8 @@
   # start ssh
   # https://discourse.nixos.org/t/ssh-agent-not-starting/16858
   programs.ssh.startAgent = true;
+
+  environment.sessionVariables = {
+    JAVA_HOME = "/home/${username}/android-studio/jbr";
+  };
 }
