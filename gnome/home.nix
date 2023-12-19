@@ -258,6 +258,7 @@
       overview-navifation-states="CYCLIC";
       pinch-3-finger-gesture="CLOSE_DOCUMENT";
       pinch-4-finger-gesture="CLOSE_WINDOW";
+      hold-swipe-delay-duration=165;
       
       # Using dictionaries
       # https://discourse.nixos.org/t/write-key-value-using-lib-hm-gvariant-for-home-manager/31234/7?u=line0174
