@@ -82,6 +82,7 @@
     # https://askubuntu.com/a/1481560
     "org/gnome/mutter" = {
       dynamic-workspaces = false;
+      edge-tiling=true;
     };
     
     # Bring back minimize and maximize buttons by default
