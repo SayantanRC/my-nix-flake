@@ -53,6 +53,8 @@
         specialArgs = { inherit username stateVersion pkgs inputs; };
         
         modules = [
+        
+         { networking.hostName = "hp-gnome"; }
           
           # ========== configs specific to HP x360 ==========
           ./hardware/hp_x360.nix
@@ -88,6 +90,8 @@
         specialArgs = { inherit username stateVersion pkgs inputs; };
         
         modules = [
+        
+         { networking.hostName = "hp-plasma"; }
           
           # ========== configs specific to HP x360 ==========
           ./hardware/hp_x360.nix
@@ -109,6 +113,8 @@
         specialArgs = { inherit username stateVersion pkgs inputs; };
         
         modules = [
+        
+         { networking.hostName = "hp-hyprland"; }
           
           # ========== configs specific to HP x360 ==========
           ./hardware/hp_x360.nix
@@ -139,6 +145,8 @@
         specialArgs = { inherit username stateVersion pkgs inputs; };
         
         modules = [
+        
+         { networking.hostName = "asus-gnome"; }
           
           ./hardware/asus_x13.nix
           ./misc/my_mount_points.nix
