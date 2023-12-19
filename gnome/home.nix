@@ -4,7 +4,8 @@
     gnomeExtensions.launch-new-instance
     gnomeExtensions.gesture-improvements
     #gnomeExtensions.pano
-    gnomeExtensions.clipboard-indicator
+    #gnomeExtensions.clipboard-indicator
+    gnomeExtensions.clipboard-history
     gnomeExtensions.vitals
     gnomeExtensions.gsconnect
     gnomeExtensions.app-icons-taskbar
@@ -227,7 +228,8 @@
         "gestureImprovements@gestures"
         "launch-new-instance@gnome-shell-extensions.gcampax.github.com"
         #"pano@elhan.io"
-        "clipboard-indicator@tudmotu.com"
+        #"clipboard-indicator@tudmotu.com"
+        "clipboard-history@alexsaveau.dev"
         "Vitals@CoreCoding.com"
         "gsconnect@andyholmes.github.io"
         "aztaskbar@aztaskbar.gitlab.com"
@@ -282,14 +284,10 @@
     #  open-links-in-browser=false;
     #};
     
-    "org/gnome/shell/extensions/clipboard-indicator" = {
-      cache-size=16384;
-      clear-history=[];
-      disable-down-arrow=true;
-      history-size=30;
-      next-entry=[];
-      prev-entry=[];
-      preview-size=100;
+    "org/gnome/shell/extensions/clipboard-history" = {
+      paste-on-selection=false;
+      toggle-private-mode=[];
+      topbar-preview-size=30;
       toggle-menu=["<Super>v"];
     };
       
