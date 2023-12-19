@@ -111,15 +111,18 @@
     tree
     exfatprogs
     p7zip
+    unrar
     stress
     pv
     pciutils
     lshw
+    smartmontools
     
     # nixos
     nixos-option
     steam-run
     appimage-run
+    nix-tree
     
     # user programs
     neofetch
@@ -128,6 +131,7 @@
     gnome.dconf-editor
     etcher
     pavucontrol
+    gsmartcontrol
     telegram-desktop
   ];
   

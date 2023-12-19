@@ -34,6 +34,7 @@
         permittedInsecurePackages = [
           "electron-12.2.3"
           "electron-19.1.9"
+          "python-2.7.18.7"
         ];
       };
     };

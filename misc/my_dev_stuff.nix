@@ -7,6 +7,9 @@
     meld
     python311
     python311Packages.pip
+    python2
+    sqlitebrowser
+    cmakeWithGui
     #postman
     
     # raspberry pi
