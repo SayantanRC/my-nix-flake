@@ -106,7 +106,7 @@
     # system tools
     dmidecode
     usbutils
-    busybox
+    coreutils-full
     fuse
     tree
     exfatprogs
