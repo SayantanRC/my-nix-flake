@@ -160,6 +160,7 @@
           ./xremap/configuration.nix
           
           ./misc/lxd.nix
+          ./misc/waydroid.nix
           
           home-manager.nixosModules.home-manager {
             home-manager.extraSpecialArgs = { inherit username stateVersion inputs; };
