@@ -1,6 +1,10 @@
 { config, pkgs, username, ... }:
 
 {
+  environment.systemPackages = with pkgs; [
+    btrfs-progs
+  ];
+
   # https://srid.ca/lxc-nixos
   # https://discourse.nixos.org/t/howto-setup-lxd-on-nixos-with-nixos-guest-using-unmanaged-bridge-network-interface/21591
   virtualisation.lxd = {
