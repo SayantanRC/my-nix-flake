@@ -17,6 +17,9 @@
     nixpkgs = { 
       url = "github:NixOS/nixpkgs/nixos-23.11";
     };
+    # Unstable setup inspired from: 
+    # https://www.reddit.com/r/NixOS/comments/klbuu2/unstable_packages_in_configurationnix_using_flakes/
+    nixpkgs-unstable.url = "nixpkgs/nixos-unstable";
     home-manager = {
       url = "github:nix-community/home-manager/release-23.11";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -24,9 +27,12 @@
     xremap-flake.url = "github:xremap/nix-flake";
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs:
+  outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, ... }@inputs:
   let
     system = "x86_64-linux";
+    overlay-unstable = final: prev: {
+      unstable = nixpkgs-unstable.legacyPackages.${system};
+    };
     pkgs = import nixpkgs {
       inherit system;
       config = { 
@@ -37,6 +43,7 @@
           "python-2.7.18.7"
         ];
       };
+      overlays = [ overlay-unstable ];
     };
     username = "sayantan";
     stateVersion = "23.05";
