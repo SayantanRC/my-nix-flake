@@ -9,4 +9,5 @@
   # sudo systemctl start waydroid-container
   #
   # For gplay registration, follow this: https://github.com/waydroid/waydroid/issues/379#issuecomment-1152526650
+  # Or here: https://docs.waydro.id/faq/google-play-certification
 }
