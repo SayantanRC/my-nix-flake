@@ -56,6 +56,11 @@
       sha256 = "sha256:1s1zyav5sz5k01av0biwkwl4x20qggj9k27znryz58khdblwxf4j";
     };
   }];
+  
+  environment.systemPackages = with pkgs; [
+    amdgpu_top
+    unstable.asusctl
+  ];
 
   # asus-linux
   services.supergfxd = {
@@ -115,10 +120,6 @@
     sensor.iio.enable = true;
     enableRedistributableFirmware = true;
   };
-  
-  environment.systemPackages = with pkgs; [
-    amdgpu_top
-  ];
   
   # commenting it out because we will run Steam from flatpak.
   # Install Flatseal and open entry for Steam.
