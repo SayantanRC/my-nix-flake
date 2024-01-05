@@ -59,7 +59,6 @@
   
   environment.systemPackages = with pkgs; [
     amdgpu_top
-    unstable.asusctl
   ];
 
   # asus-linux
