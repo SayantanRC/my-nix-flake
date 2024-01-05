@@ -132,6 +132,7 @@
     etcher
     pavucontrol
     gsmartcontrol
+    cpu-x
     telegram-desktop
   ];
   
