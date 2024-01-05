@@ -14,6 +14,7 @@ let
       asusctl fan-curve -m $current_profile -f gpu -D 30c:0%,49c:0%,59c:0%,69c:0%,79c:0%,89c:0%,99c:0%,109c:0%
       asusctl fan-curve -e true -m $current_profile
       echo "Fans zero speed!"
+      notify-send -a "Fan toggle" -u critical "Fans zero speed!"
       exit
     fi
 
@@ -21,6 +22,7 @@ let
     if [[ -n $zero_ending ]]; then
       asusctl fan-curve -d
       echo "Fans default speed."
+      notify-send -a "Fan toggle" "Fans default speed"
       exit
     fi
 
@@ -29,6 +31,7 @@ let
     asusctl fan-curve -m $current_profile -f gpu -D 30c:100%,49c:100%,59c:100%,69c:100%,79c:100%,89c:100%,99c:100%,109c:100%
     asusctl fan-curve -e true -m $current_profile
     echo "Fans MAX speed!"
+    notify-send -a "Fan toggle" "Fans MAX speed!"
   '';
 
 in
