@@ -166,7 +166,7 @@
           
           ./xremap/configuration.nix
           
-          ./misc/lxd.nix
+          ./misc/distrobox.nix
           ./misc/waydroid.nix
           
           home-manager.nixosModules.home-manager {
