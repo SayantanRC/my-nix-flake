@@ -116,6 +116,7 @@
     pv
     pciutils
     lshw
+    libnotify
     smartmontools
     
     # nixos
