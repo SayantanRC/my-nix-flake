@@ -2,9 +2,9 @@
 
 {
   # https://www.youtube.com/watch?v=ztjZRam-Ps4
-  virtualisation.docker.enable = true;
+  virtualisation.podman.enable = true;
   users.users.${username} = {
-    extraGroups = [ "docker" ];
+    extraGroups = [ "podman" ];
   };
   environment.systemPackages = with pkgs; [
     distrobox
