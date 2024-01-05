@@ -36,10 +36,10 @@
   };
   
   # Enable cron service to restart xremap on boot, because often times it fails to detect keyboard, even if watch is enabled.
-  services.cron = {
-    enable = true;
-    systemCronJobs = [
-      "@reboot    root    sleep 5 && systemctl restart xremap.service"
-    ];
-  };
+  #services.cron = {
+  #  enable = true;
+  #  systemCronJobs = [
+  #    "@reboot    root    sleep 5 && systemctl restart xremap.service"
+  #  ];
+  #};
 }
