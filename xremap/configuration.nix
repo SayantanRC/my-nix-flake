@@ -8,7 +8,7 @@
   services.xremap = {
     userName = "${username}";
     # enable watch: https://github.com/k0kubun/xremap/issues/371
-    #watch = true; # does not work anyway
+    watch = true; # does not work anyway
     withGnome = true;
     serviceMode = "user";
     yamlConfig = ''
