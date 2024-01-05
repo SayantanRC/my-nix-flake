@@ -1,10 +1,6 @@
 { config, lib, pkgs, username, ... }:
 
 {
-
-  home.packages = with pkgs; [
-    fullfans
-  ];
   
   dconf.settings = {
    
@@ -23,7 +19,7 @@
 
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom100" = {
       binding="XF86Launch4";
-      command="fullfans-toggle";
+      command="fan-speed-toggle";
       name="Fan speed toggle";
     };
 
