@@ -102,6 +102,7 @@ in
   
   environment.systemPackages = with pkgs; [
     amdgpu_top
+    unstable.asusctl
 
     # scripts
     fan-toggle
@@ -117,6 +118,17 @@ in
       no_logind = false;
       logout_timeout_s = 30;
       hotplug_type = "Asus";
+    };
+  };
+
+  # Forcing asusd to use new asusctl.
+  # First line of ExecStart clears existing value: https://github.com/NixOS/nixpkgs/issues/63703#issuecomment-504836857
+  systemd.services.asusd = {
+    serviceConfig = {
+      ExecStart = [
+        ""
+        "${pkgs.unstable.asusctl}/bin/asusd"
+      ];
     };
   };
 
