@@ -103,6 +103,7 @@ in
   environment.systemPackages = with pkgs; [
     amdgpu_top
     unstable.asusctl
+    unstable.supergfxctl
 
     # scripts
     fan-toggle
@@ -123,12 +124,22 @@ in
 
   # Forcing asusd to use new asusctl.
   # First line of ExecStart clears existing value: https://github.com/NixOS/nixpkgs/issues/63703#issuecomment-504836857
-  systemd.services.asusd = {
-    serviceConfig = {
-      ExecStart = [
-        ""
-        "${pkgs.unstable.asusctl}/bin/asusd"
-      ];
+  systemd.services = {
+    asusd = {
+      serviceConfig = {
+        ExecStart = [
+          ""
+          "${pkgs.unstable.asusctl}/bin/asusd"
+        ];
+      };
+    };
+    supergfxd = {
+      serviceConfig = {
+        ExecStart = [
+          ""
+          "${pkgs.unstable.supergfxctl}/bin/supergfxd"
+        ];
+      };
     };
   };
 
