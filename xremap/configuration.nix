@@ -29,7 +29,7 @@
       
       - name: Nautilus
         remap:
-          Backspace: LeftAlt-Left
+          Backspace: [LeftAlt-Left, Backspace]
         application:
           only: org.gnome.Nautilus
     '';
