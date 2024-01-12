@@ -23,6 +23,7 @@
     gnomeExtensions.blur-my-shell
     gnomeExtensions.desktop-icons-ng-ding
     gnomeExtensions.emoji-copy
+    # Bluetooth battery meter ?
     
     simp1e-cursors
   ];
@@ -248,6 +249,7 @@
         "ding@rastersoft.com"
         "emoji-copy@felipeftn"
         #"gnome-shell-screenshot@ttll.de"
+        "Bluetooth-Battery-Meter@maniacx.github.com"
       ];
       favorite-apps=["org.gnome.Epiphany.desktop" "firefox.desktop" "org.gnome.Console.desktop" "org.gnome.Nautilus.desktop" "org.gnome.TextEditor.desktop"];
     };
@@ -367,6 +369,12 @@
       always-show=true;
       emoji-keybinding=["<Super>period"];
       use-keybinding=true;
+    };
+
+    "org/gnome/shell/extensions/Bluetooth-Battery-Meter" = {
+      enable-battery-indicator=true;
+      enable-battery-level-text=true;
+      swap-icon-text=false;
     };
 
   };  
