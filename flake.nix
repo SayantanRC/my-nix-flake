@@ -85,7 +85,7 @@
               imports = [
                 ./general/home.nix
                 ./gnome/home.nix
-                ./gnome/hp.nix
+                ./gnome/hp.home.nix
                 ./xremap/gnome.nix
               ];
             };
