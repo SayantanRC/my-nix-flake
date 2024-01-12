@@ -1,5 +1,5 @@
 # cd "/mnt/linux_shared/my_nix_flake"
-# CONFIG=hp_gnome # example
+# CONFIG=hp-gnome # example
 # nixos-rebuild build --flake .#$CONFIG
 # sudo nixos-rebuild switch --flake .#$CONFIG
 
