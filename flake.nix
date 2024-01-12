@@ -55,7 +55,7 @@
       # ========================== HP ==========================
       
       # For my HP x360, with GNOME 44.2
-      hp_gnome = nixpkgs.lib.nixosSystem {
+      hp-gnome = nixpkgs.lib.nixosSystem {
       
         inherit system;
         specialArgs = { inherit username stateVersion pkgs inputs; };
@@ -91,7 +91,7 @@
         ];
       };
       
-      hp_plasma = nixpkgs.lib.nixosSystem {
+      hp-plasma = nixpkgs.lib.nixosSystem {
       
         inherit system;
         specialArgs = { inherit username stateVersion pkgs inputs; };
@@ -114,7 +114,7 @@
         ];
       };
       
-      hp_hyprland = nixpkgs.lib.nixosSystem {
+      hp-hyprland = nixpkgs.lib.nixosSystem {
       
         inherit system;
         specialArgs = { inherit username stateVersion pkgs inputs; };
@@ -146,7 +146,7 @@
       
       
       # For my ASUS X13, with GNOME 44.2
-      asus_gnome = nixpkgs.lib.nixosSystem {
+      asus-gnome = nixpkgs.lib.nixosSystem {
       
         inherit system;
         specialArgs = { inherit username stateVersion pkgs inputs; };
