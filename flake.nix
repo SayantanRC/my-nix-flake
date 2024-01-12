@@ -83,9 +83,10 @@
             home-manager.users.${username} = {
               home.stateVersion = stateVersion;
               imports = [
-               ./general/home.nix
-               ./gnome/home.nix
-               ./xremap/gnome.nix
+                ./general/home.nix
+                ./gnome/home.nix
+                ./gnome/hp.nix
+                ./xremap/gnome.nix
               ];
             };
           }
@@ -176,10 +177,10 @@
             home-manager.users.${username} = {
               home.stateVersion = stateVersion;
               imports = [
-               ./gnome/asus_x13.home.nix
-               ./general/home.nix
-               ./gnome/home.nix
-               ./xremap/gnome.nix
+                ./general/home.nix
+                ./gnome/home.nix
+                ./gnome/asus_x13.home.nix
+                ./xremap/gnome.nix
               ];
             };
           }

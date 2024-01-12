@@ -298,7 +298,7 @@
       alphabetize=true;
       fixed-widths=true;
       hide-icons=false;
-      hot-sensors=["__network-rx_max__" "_temperature_acpi_thermal zone_" "_memory_usage_"];
+      hot-sensors=["__network-rx_max__" "_temperature_acpi_thermal zone_"];
       include-static-info=false;
       show-battery=true;
       show-fan=true;
