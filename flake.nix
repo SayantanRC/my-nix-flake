@@ -158,15 +158,14 @@
          { networking.hostName = "asus-gnome"; }
           
           ./hardware/asus_x13.nix
+
+          ./system/asus_x13.nix
+          ./system/common.nix
+          ./system/gnome.nix
+
           ./misc/my_mount_points.nix
-          
-          ./general/configuration.nix
-          ./gnome/configuration.nix
-          
           ./misc/my_dev_stuff.nix
-          
-          ./xremap/configuration.nix
-          
+          ./misc/xremap.nix
           ./misc/distrobox.nix
           ./misc/waydroid.nix
           
@@ -177,10 +176,11 @@
             home-manager.users.${username} = {
               home.stateVersion = stateVersion;
               imports = [
-                ./general/home.nix
-                ./gnome/home.nix
-                ./gnome/asus_x13.home.nix
-                ./xremap/gnome.nix
+                ./home/asus_x13.nix
+                ./home/common.nix
+                ./home/gnome.nix
+                
+                ./home/gnome.xremap.nix
               ];
             };
           }
