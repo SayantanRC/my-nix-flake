@@ -176,10 +176,10 @@
             home-manager.users.${username} = {
               home.stateVersion = stateVersion;
               imports = [
-                ./home/asus_x13.nix
                 ./home/common.nix
                 ./home/gnome.nix
-                
+                ./home/gnome.asus_x13.nix
+
                 ./home/gnome.xremap.nix
               ];
             };
