@@ -99,6 +99,11 @@
 
   # enable bluetooth: https://nixos.wiki/wiki/Bluetooth
   hardware.bluetooth.enable = true;
+  # https://www.reddit.com/r/NixOS/comments/16in2if/how_to_turn_on_bluetooth_experimental_features/
+  systemd.services.bluetooth.serviceConfig.ExecStart = lib.mkForce [
+    ""
+    "${pkgs.bluez}/libexec/bluetooth/bluetoothd -f /etc/bluetooth/main.conf --experimental"
+  ];
 
   # add gparted to already present system packages
   # https://stackoverflow.com/a/53692127
