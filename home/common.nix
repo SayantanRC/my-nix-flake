@@ -50,6 +50,7 @@ in {
     onboard
     android-tools
     sony-headphones-client
+    unstable.overskride
     # For flatpak
     gnome.gnome-software
 
