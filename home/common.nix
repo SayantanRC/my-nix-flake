@@ -49,6 +49,7 @@ in {
     cinnamon.warpinator
     onboard
     android-tools
+    sony-headphones-client
     # For flatpak
     gnome.gnome-software
 
