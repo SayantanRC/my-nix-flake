@@ -207,4 +207,11 @@ in
     }];
   };
 
+  services.cron = {
+    enable = true;
+    systemCronJobs = [
+      "@reboot    root    sleep 5 && cpu-power-toggle low"
+    ];
+  };
+
 }
