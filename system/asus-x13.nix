@@ -42,6 +42,26 @@ let
     notify-send -a "Fan toggle" "Fans MAX speed!"
   '';
 
+  cpu-power-toggle = pkgs.writeShellScriptBin "cpu-power-toggle" ''
+
+    state_file=/tmp/power_state
+
+    if [[ ! -e $state_file || `cat $state_file` == "default" ]]; then
+      echo "low" > $state_file
+    elif [[ `cat $state_file` == "low" ]]; then
+      echo "default" > $state_file
+    fi
+
+    if [[ `cat $state_file` == "low" ]]; then
+      sudo ryzenadj --stapm-limit=15000 --fast-limit=25000 --slow-limit=20000 --tctl-temp=65
+      notify-send -a "CPU power toggle" "Low CPU power"
+    else
+      sudo ryzenadj --stapm-limit=35000 --fast-limit=55000 --slow-limit=50000 --tctl-temp=85
+      notify-send -a "CPU power toggle" "HIGH CPU power!!"
+    fi
+
+  '';
+
 in
 {
   
@@ -71,9 +91,12 @@ in
     amdgpu_top
     unstable.asusctl
     unstable.supergfxctl
+    ryzenadj
+    cpufrequtils
 
     # scripts
     fan-toggle
+    cpu-power-toggle
   ];
 
   # asus-linux
@@ -170,5 +193,18 @@ in
 
   # make the entries bigger than ant-size text.
   boot.loader.systemd-boot.consoleMode = "1";
+
+  security.sudo = {
+    enable = true;
+    extraRules = [{
+      commands = [
+        {
+          command = "/run/current-system/sw/bin/ryzenadj";
+          options = [ "NOPASSWD" ];
+        }
+      ];
+      groups = [ "wheel" ];
+    }];
+  };
 
 }
