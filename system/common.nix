@@ -173,4 +173,8 @@
     ${username}	ALL=(root)	NOPASSWD: /run/current-system/sw/bin/nix-collect-garbage
   '';
 
+  environment.variables = {
+    EDITOR = "vim";
+  };
+
 }
