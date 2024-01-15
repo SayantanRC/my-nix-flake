@@ -46,9 +46,9 @@ let
 
     state_file=/tmp/power_state
 
-    if [[ ! -e $state_file || `cat $state_file` == "default" ]]; then
+    if [[ ! -e $state_file || `cat $state_file` == "default" || "$1" == "low" ]]; then
       echo "low" > $state_file
-    elif [[ `cat $state_file` == "low" ]]; then
+    elif [[ `cat $state_file` == "low" || "$1" == "default" ]]; then
       echo "default" > $state_file
     fi
 
