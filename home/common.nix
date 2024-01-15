@@ -44,6 +44,7 @@ in {
     mpv
     gthumb
     google-chrome
+    floorp
     qbittorrent
     localsend
     cinnamon.warpinator
@@ -51,6 +52,7 @@ in {
     android-tools
     sony-headphones-client
     unstable.overskride
+    kooha
     # For flatpak
     gnome.gnome-software
 
