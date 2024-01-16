@@ -1,4 +1,4 @@
-{ config, lib, pkgs, modulesPath, ... }:
+{ config, lib, pkgs, modulesPath, username, ... }:
 
 let
 
@@ -9,7 +9,7 @@ let
     zero_ending=`asusctl fan-curve -g | head -n 1 | awk -F',' '{print $9}' | grep ":0%"`
 
     # Max speed : max -> default
-    if [[ -n $max_beginning ]]; then
+    if [[ -n $max_beginning && "$1" != "max" ]]; then
       asusctl fan-curve -d
       echo "Fans default speed."
       notify-send -a "Fan toggle" "Fans default speed"
@@ -17,7 +17,7 @@ let
     fi
 
     # Zero speed : zero -> default
-    if [[ -n $zero_ending ]]; then
+    if [[ -n $zero_ending && "$1" != "max" ]]; then
       asusctl fan-curve -d
       echo "Fans default speed."
       notify-send -a "Fan toggle" "Fans default speed"
@@ -46,20 +46,40 @@ let
 
     state_file=/tmp/power_state
 
-    if [[ ! -e $state_file || `cat $state_file` == "default" || "$1" == "low" ]]; then
-      echo "low" > $state_file
+    if [[ ! -e $state_file ]]; then
+      sudo runuser -u ${username} -- echo "low" > $state_file
+    elif [[ "$1" == "maintain" ]]; then
+      echo "Maintain CPU power."
+    elif [[ `cat $state_file` != "low" || "$1" == "low" ]]; then
+      sudo runuser -u ${username} -- echo "low" > $state_file
     elif [[ `cat $state_file` == "low" || "$1" == "default" ]]; then
-      echo "default" > $state_file
+      sudo runuser -u ${username} -- echo "default" > $state_file
     fi
 
-    if [[ `cat $state_file` == "low" ]]; then
-      sudo ryzenadj --stapm-limit=15000 --fast-limit=25000 --slow-limit=20000 --tctl-temp=65
+    if [[ "$1" == "extreme" ]]; then
+      sudo ryzenadj --stapm-limit=55000 --fast-limit=65000 --slow-limit=60000 --tctl-temp=90 --apu-skin-temp=90
+      sudo runuser -u ${username} -- echo "extreme" > $state_file
+      notify-send -a "CPU power toggle" -u critical "!!!!EXTREME CPU POWER!!!!"
+    elif [[ `cat $state_file` == "low" ]]; then
+      sudo ryzenadj --stapm-limit=15000 --fast-limit=25000 --slow-limit=20000 --tctl-temp=65 --apu-skin-temp=45
       notify-send -a "CPU power toggle" "Low CPU power"
     else
-      sudo ryzenadj --stapm-limit=35000 --fast-limit=55000 --slow-limit=50000 --tctl-temp=85
+      sudo ryzenadj --stapm-limit=35000 --fast-limit=55000 --slow-limit=50000 --tctl-temp=75 --apu-skin-temp=70
       notify-send -a "CPU power toggle" "HIGH CPU power!!"
     fi
 
+  '';
+
+  extreme-perf = pkgs.writeShellScriptBin "extreme-perf" ''
+    fan-speed-toggle max
+    sleep 1
+    cpu-power-toggle extreme
+  '';
+
+  fan-toggle-maintain-cpu-power = pkgs.writeShellScriptBin "fan-toggle-maintain-cpu-power" ''
+    fan-speed-toggle $1
+    sleep 1
+    cpu-power-toggle maintain
   '';
 
 in
@@ -97,6 +117,8 @@ in
     # scripts
     fan-toggle
     cpu-power-toggle
+    extreme-perf
+    fan-toggle-maintain-cpu-power
   ];
 
   # asus-linux
@@ -200,6 +222,10 @@ in
       commands = [
         {
           command = "/run/current-system/sw/bin/ryzenadj";
+          options = [ "NOPASSWD" ];
+        }
+        {
+          command = "/run/current-system/sw/bin/runuser";
           options = [ "NOPASSWD" ];
         }
       ];
