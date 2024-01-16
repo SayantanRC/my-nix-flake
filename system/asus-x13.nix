@@ -236,7 +236,8 @@ in
   services.cron = {
     enable = true;
     systemCronJobs = [
-      "@reboot    root    sleep 5 && cpu-power-toggle low"
+      "@reboot        root    sleep 5 && cpu-power-toggle low"
+      "*/1 * * * *    root    cpu-power-toggle maintain"
     ];
   };
 
