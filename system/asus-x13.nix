@@ -47,18 +47,18 @@ let
     state_file=/tmp/power_state
 
     if [[ ! -e $state_file ]]; then
-      sudo runuser -u ${username} -- echo "low" > $state_file
+      echo "low" > $state_file
     elif [[ "$1" == "maintain" ]]; then
       echo "Maintain CPU power."
     elif [[ `cat $state_file` != "low" || "$1" == "low" ]]; then
-      sudo runuser -u ${username} -- echo "low" > $state_file
+      echo "low" > $state_file
     elif [[ `cat $state_file` == "low" || "$1" == "default" ]]; then
-      sudo runuser -u ${username} -- echo "default" > $state_file
+      echo "default" > $state_file
     fi
 
     if [[ "$1" == "extreme" ]]; then
       sudo ryzenadj --stapm-limit=55000 --fast-limit=65000 --slow-limit=60000 --tctl-temp=90 --apu-skin-temp=90
-      sudo runuser -u ${username} -- echo "extreme" > $state_file
+      echo "extreme" > $state_file
       [[ "$*" != *"q"* ]] && notify-send -a "CPU power toggle" -u critical "!!!!EXTREME CPU POWER!!!!"
     elif [[ `cat $state_file` == "low" ]]; then
       sudo ryzenadj --stapm-limit=15000 --fast-limit=25000 --slow-limit=20000 --tctl-temp=65 --apu-skin-temp=45
@@ -67,6 +67,8 @@ let
       sudo ryzenadj --stapm-limit=35000 --fast-limit=55000 --slow-limit=50000 --tctl-temp=75 --apu-skin-temp=70
       [[ "$*" != *"q"* ]] && notify-send -a "CPU power toggle" "HIGH CPU power!!"
     fi
+
+    chmod 666 $state_file
 
   '';
 
