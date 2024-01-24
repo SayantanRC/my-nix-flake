@@ -166,6 +166,7 @@
           ./misc/xremap.nix
           ./misc/distrobox.nix
           ./misc/waydroid.nix
+          ./misc/tailscale.nix
           
           home-manager.nixosModules.home-manager {
             home-manager.extraSpecialArgs = { inherit username stateVersion inputs; };
