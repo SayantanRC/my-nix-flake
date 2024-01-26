@@ -163,6 +163,7 @@
 
           ./misc/my_mount_points.nix
           ./misc/my_dev_stuff.nix
+          ./misc/my_server.nix
           ./misc/xremap.nix
           ./misc/distrobox.nix
           ./misc/waydroid.nix
