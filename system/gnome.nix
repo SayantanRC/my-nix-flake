@@ -43,22 +43,10 @@
   networking.firewall.allowedTCPPortRanges = [
     # KDE Connect
     { from = 1714; to = 1764; }
-    # Warpinator
-    { from = 42000; to = 42001; }
   ];
   networking.firewall.allowedUDPPortRanges = [
     # KDE Connect
     { from = 1714; to = 1764; }
-    # Warpinator
-    { from = 42000; to = 42001; }
-  ];
-  networking.firewall.allowedTCPPorts = [
-    # localsend
-    53317 
-  ];
-  networking.firewall.allowedUDPPorts = [
-    # localsend
-    53317 
   ];
   
   # GSettings schemas of all apps are not made global unless they are declared here.

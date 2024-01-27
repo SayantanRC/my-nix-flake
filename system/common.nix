@@ -12,6 +12,21 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
+  # ports for applications
+  networking.firewall.allowedTCPPorts = [
+    # localsend
+    53317
+    # warpinator
+    42000
+    42001
+  ];
+  networking.firewall.allowedUDPPorts = [
+    # localsend
+    53317
+    # warpinator
+    5353
+  ];
+
   # Set your time zone.
   time.timeZone = "Asia/Kolkata";
 
