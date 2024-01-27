@@ -123,6 +123,8 @@
     lshw
     libnotify
     smartmontools
+    dig
+    x265
     
     # nixos
     nixos-option
