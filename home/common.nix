@@ -46,7 +46,7 @@ in {
     google-chrome
     floorp
     qbittorrent
-    localsend
+    #localsend
     cinnamon.warpinator
     onboard
     android-tools
