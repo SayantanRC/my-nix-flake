@@ -151,6 +151,7 @@
     neofetch
     vim
     gparted
+    gedit
     gnome.dconf-editor
     etcher
     pavucontrol
