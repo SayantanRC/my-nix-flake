@@ -140,6 +140,7 @@
     smartmontools
     dig
     x265
+    exiftool
     
     # nixos
     nixos-option
