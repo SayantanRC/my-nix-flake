@@ -159,7 +159,6 @@
     gsmartcontrol
     cpu-x
     telegram-desktop
-    thefuck
   ];
   
   # May enable tap to click by default.
