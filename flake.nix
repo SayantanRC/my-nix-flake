@@ -182,6 +182,7 @@
                 ./home/gnome.asus-x13.nix
 
                 ./home/gnome.xremap.nix
+                ./home/thefuck.nix
               ];
             };
           }
