@@ -24,6 +24,7 @@
     gnomeExtensions.desktop-icons-ng-ding
     gnomeExtensions.emoji-copy
     # Bluetooth battery meter ?
+    gnomeExtensions.logo-menu
     
     simp1e-cursors
   ];
@@ -250,6 +251,7 @@
         "emoji-copy@felipeftn"
         #"gnome-shell-screenshot@ttll.de"
         "Bluetooth-Battery-Meter@maniacx.github.com"
+        "logomenu@aryan_k"
       ];
       favorite-apps=["org.gnome.Epiphany.desktop" "firefox.desktop" "org.gnome.Console.desktop" "org.gnome.Nautilus.desktop" "org.gnome.TextEditor.desktop"];
     };
