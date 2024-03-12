@@ -255,6 +255,10 @@
       ];
       favorite-apps=["org.gnome.Epiphany.desktop" "firefox.desktop" "org.gnome.Console.desktop" "org.gnome.Nautilus.desktop" "org.gnome.TextEditor.desktop"];
     };
+
+    # Dump dconf
+    # dconf dump / > ~/dconf-backup.txt
+    # https://askubuntu.com/a/522843
       
     "org/gnome/shell/extensions/gestureImprovements" = {
       allow-minimize-window=true;
@@ -377,6 +381,15 @@
       enable-battery-indicator=true;
       enable-battery-level-text=true;
       swap-icon-text=false;
+    };
+
+    "org/gnome/shell/extensions/Logo-menu" = {
+      menu-button-extensions-app="com.mattjakeman.ExtensionManager.desktop";
+      menu-button-icon-image=18;
+      menu-button-icon-size=24;
+      show-activities-button=true;
+      show-power-options=false;
+      symbolic-icon=false;
     };
 
   };  
