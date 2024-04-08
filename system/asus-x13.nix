@@ -115,6 +115,7 @@ in
     unstable.supergfxctl
     ryzenadj
     cpufrequtils
+    corectrl
 
     # scripts
     fan-toggle
