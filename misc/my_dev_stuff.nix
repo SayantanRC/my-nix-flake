@@ -10,7 +10,7 @@
     python2
     sqlitebrowser
     cmakeWithGui
-    #postman
+    bruno
     
     # raspberry pi
     rpi-imager
