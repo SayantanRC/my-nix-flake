@@ -103,7 +103,8 @@
     # =============== Key bindings ===============
     
     "org/gnome/desktop/wm/keybindings" = {
-      switch-applications = ["<Super>Tab"];
+      switch-applications = ["<Super>Grave"];
+      switch-group = ["<Super>Tab"];
       switch-windows = ["<alt>Tab"];
       close = ["<Shift><Alt>q"];
     };
