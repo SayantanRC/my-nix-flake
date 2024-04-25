@@ -11,6 +11,7 @@
     sqlitebrowser
     cmakeWithGui
     bruno
+    keystore-explorer
     
     # raspberry pi
     rpi-imager
