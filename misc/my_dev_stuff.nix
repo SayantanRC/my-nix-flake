@@ -12,6 +12,7 @@
     cmakeWithGui
     bruno
     keystore-explorer
+    jq
     
     # raspberry pi
     rpi-imager
