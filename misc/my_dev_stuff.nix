@@ -13,6 +13,7 @@
     bruno
     keystore-explorer
     jq
+    gitlab-runner
     
     # raspberry pi
     rpi-imager
