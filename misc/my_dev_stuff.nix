@@ -13,6 +13,7 @@
     bruno
     keystore-explorer
     jq
+    envsubst
     gitlab-runner
     
     # raspberry pi
