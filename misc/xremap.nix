@@ -35,6 +35,15 @@
     '';
   };
   
+  # Disable touchpad while typing
+  # https://www.reddit.com/r/NixOS/comments/yprnch/comment/ivs29dp/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button
+  # https://github.com/xremap/xremap/issues/152
+  environment.etc."libinput/local-overrides.quirks".text = ''
+    [xremap]
+    MatchUdevType=keyboard
+    AttrKeyboardIntegration=internal
+  '';
+  
   # Enable cron service to restart xremap on boot, because often times it fails to detect keyboard, even if watch is enabled.
   #services.cron = {
   #  enable = true;
