@@ -32,6 +32,10 @@
           Shift-Win-S: Shift-Print
           Shift-Alt-S: Print
       
+      - name: keyboard backlight
+        remap:
+          RightMeta-Space: KbdIllumToggle
+      
       - name: Nautilus
         remap:
           Backspace: [LeftAlt-Left, Backspace]
