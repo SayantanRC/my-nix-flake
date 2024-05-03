@@ -12,15 +12,20 @@
     withGnome = true;
     serviceMode = "user";
     yamlConfig = ''
+    modmap:
+      - name: Remap right alt
+        remap:
+          RightAlt: RightMeta
+    
     keymap:
       - name: Home-End keys
         remap:
-          RightAlt-Right: End
-          RightAlt-Left: Home
-          RightAlt-Up: PageUp
-          RightAlt-Down: PageDown
-          RightAlt-RightBrace: End
-          RightAlt-LeftBrace: Home
+          RightMeta-Right: End
+          RightMeta-Left: Home
+          RightMeta-Up: PageUp
+          RightMeta-Down: PageDown
+          RightMeta-RightBrace: End
+          RightMeta-LeftBrace: Home
 
       - name: Screenshots
         remap:
