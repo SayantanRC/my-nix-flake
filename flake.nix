@@ -166,7 +166,7 @@
           ./misc/my_server.nix
           ./misc/xremap.nix
           ./misc/distrobox.nix
-          ./misc/waydroid.nix
+          #./misc/waydroid.nix
           ./misc/tailscale.nix
           ./misc/thefuck.nix
           
