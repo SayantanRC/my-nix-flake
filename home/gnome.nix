@@ -23,7 +23,7 @@
     gnomeExtensions.blur-my-shell
     gnomeExtensions.desktop-icons-ng-ding
     gnomeExtensions.emoji-copy
-    # Bluetooth battery meter ?
+    gnomeExtensions.bluetooth-battery-meter
     gnomeExtensions.logo-menu
     gnomeExtensions.sleep-through-notifications
     
@@ -246,7 +246,7 @@
         "expandable-notifications@kaan.g.inam.org"
         "just-perfection-desktop@just-perfection"
         #"material-you-theme@asubbiah.com"
-        "flypie@schneegans.github.com"
+        #"flypie@schneegans.github.com"
         "transparent-top-bar@ftpix.com"
         "blur-my-shell@aunetx"
         "ding@rastersoft.com"
