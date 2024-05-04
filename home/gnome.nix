@@ -25,6 +25,7 @@
     gnomeExtensions.emoji-copy
     # Bluetooth battery meter ?
     gnomeExtensions.logo-menu
+    gnomeExtensions.sleep-through-notifications
     
     simp1e-cursors
   ];
@@ -253,6 +254,7 @@
         #"gnome-shell-screenshot@ttll.de"
         "Bluetooth-Battery-Meter@maniacx.github.com"
         "logomenu@aryan_k"
+        "sleep-through-notifications@rhendric.gitlab.the_name_of_this_desktop_environment.org"
       ];
       favorite-apps=["org.gnome.Epiphany.desktop" "firefox.desktop" "org.gnome.Console.desktop" "org.gnome.Nautilus.desktop" "org.gnome.TextEditor.desktop"];
     };
