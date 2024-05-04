@@ -1,6 +1,6 @@
 { config, lib, pkgs, username, ... }:
 {
-  home.packages = with pkgs; [
+  home.packages = with pkgs.unstable; [
     gnomeExtensions.launch-new-instance
     gnomeExtensions.gesture-improvements
     #gnomeExtensions.pano
