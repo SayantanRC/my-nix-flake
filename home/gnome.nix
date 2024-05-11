@@ -329,7 +329,7 @@
       panel-location="TOP";
       peek-windows=true;
       position-in-panel="LEFT";
-      show-apps-button=lib.hm.gvariant.mkTuple[true 0];
+      show-apps-button=lib.hm.gvariant.mkTuple[false 0];
       window-previews=false;
     };
       
