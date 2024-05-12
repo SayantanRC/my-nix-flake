@@ -402,7 +402,7 @@
     };
 
     "org/gnome/shell/extensions/runcat" = {
-      displaying-items="character-and-percentage";
+      displaying-items="character-only";
       idle-threshold=5;
     };
 
