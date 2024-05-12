@@ -1,6 +1,6 @@
 { config, lib, pkgs, username, ... }:
 {
-  home.packages = with pkgs.unstable; [
+  home.packages = (with pkgs.unstable; [
     gnomeExtensions.launch-new-instance
     gnomeExtensions.gesture-improvements
     #gnomeExtensions.pano
@@ -22,13 +22,13 @@
     gnomeExtensions.transparent-top-bar-adjustable-transparency
     gnomeExtensions.blur-my-shell
     gnomeExtensions.desktop-icons-ng-ding
-    gnomeExtensions.emoji-copy
     gnomeExtensions.bluetooth-battery-meter
     gnomeExtensions.logo-menu
     gnomeExtensions.sleep-through-notifications
-    
+  ]) ++ (with pkgs; [
+    gnomeExtensions.emoji-copy
     simp1e-cursors
-  ];
+  ]);
   
   
   # https://www.reddit.com/r/NixOS/comments/ytr2h7/set_system_icons_with_homemanager/
@@ -251,11 +251,11 @@
         "transparent-top-bar@ftpix.com"
         "blur-my-shell@aunetx"
         "ding@rastersoft.com"
-        "emoji-copy@felipeftn"
         #"gnome-shell-screenshot@ttll.de"
         "Bluetooth-Battery-Meter@maniacx.github.com"
         "logomenu@aryan_k"
         "sleep-through-notifications@rhendric.gitlab.the_name_of_this_desktop_environment.org"
+        "emoji-copy@felipeftn"
       ];
       favorite-apps=["org.gnome.Epiphany.desktop" "firefox.desktop" "org.gnome.Console.desktop" "org.gnome.Nautilus.desktop" "org.gnome.TextEditor.desktop"];
     };
