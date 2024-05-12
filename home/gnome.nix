@@ -25,6 +25,7 @@
     gnomeExtensions.bluetooth-battery-meter
     gnomeExtensions.logo-menu
     gnomeExtensions.sleep-through-notifications
+    gnomeExtensions.runcat
   ]) ++ (with pkgs; [
     gnomeExtensions.emoji-copy
     simp1e-cursors
@@ -255,6 +256,7 @@
         "Bluetooth-Battery-Meter@maniacx.github.com"
         "logomenu@aryan_k"
         "sleep-through-notifications@rhendric.gitlab.the_name_of_this_desktop_environment.org"
+        "runcat@kolesnikov.se"
         "emoji-copy@felipeftn"
       ];
       favorite-apps=["org.gnome.Epiphany.desktop" "firefox.desktop" "org.gnome.Console.desktop" "org.gnome.Nautilus.desktop" "org.gnome.TextEditor.desktop"];
@@ -395,6 +397,11 @@
       show-activities-button=true;
       show-power-options=false;
       symbolic-icon=false;
+    };
+
+    "org/gnome/shell/extensions/runcat" = {
+      displaying-items="character-and-percentage";
+      idle-threshold=5;
     };
 
   };  
