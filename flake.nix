@@ -94,7 +94,7 @@
       hp-plasma = nixpkgs.lib.nixosSystem {
       
         inherit system;
-        specialArgs = { inherit username stateVersion pkgs inputs; };
+        specialArgs = { inherit username stateVersion pkgs inputs home-manager; };
         
         modules = [
         
@@ -183,7 +183,7 @@
 
                 ./home/gnome.xremap.nix
                 ./home/gnome.tailscale.nix
-                ./home/thefuck.nix
+                #./home/thefuck.nix
               ];
             };
           }
