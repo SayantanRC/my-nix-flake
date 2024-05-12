@@ -26,6 +26,7 @@
     gnomeExtensions.logo-menu
     gnomeExtensions.sleep-through-notifications
     gnomeExtensions.runcat
+    gnomeExtensions.status-area-horizontal-spacing
   ]) ++ (with pkgs; [
     gnomeExtensions.emoji-copy
     simp1e-cursors
@@ -257,6 +258,7 @@
         "logomenu@aryan_k"
         "sleep-through-notifications@rhendric.gitlab.the_name_of_this_desktop_environment.org"
         "runcat@kolesnikov.se"
+        "status-area-horizontal-spacing@mathematical.coffee.gmail.com"
         "emoji-copy@felipeftn"
       ];
       favorite-apps=["org.gnome.Epiphany.desktop" "firefox.desktop" "org.gnome.Console.desktop" "org.gnome.Nautilus.desktop" "org.gnome.TextEditor.desktop"];
