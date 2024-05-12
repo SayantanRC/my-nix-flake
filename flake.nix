@@ -169,6 +169,7 @@
           #./misc/waydroid.nix
           ./misc/tailscale.nix
           ./misc/thefuck.nix
+          ./misc/libvert.nix
           
           home-manager.nixosModules.home-manager {
             home-manager.extraSpecialArgs = { inherit username stateVersion inputs; };
