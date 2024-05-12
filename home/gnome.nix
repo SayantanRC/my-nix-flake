@@ -17,7 +17,7 @@
     gnomeExtensions.expandable-notifications
     gnomeExtensions.just-perfection
     gnomeExtensions.material-you-color-theming
-    gnomeExtensions.date-menu-formatter
+    #gnomeExtensions.date-menu-formatter # not needed anymore
     # fly pie ?
     gnomeExtensions.transparent-top-bar-adjustable-transparency
     gnomeExtensions.blur-my-shell
