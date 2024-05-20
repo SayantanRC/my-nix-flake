@@ -43,6 +43,7 @@
     virt-viewer
     virtio-win
     win-spice
+    virtiofsd
   ];
   programs.virt-manager.enable = true;
 
