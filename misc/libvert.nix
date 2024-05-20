@@ -1,4 +1,5 @@
-#https://github.com/erictossell/nixflakes/blob/main/modules/virt/libvirt.nix
+# https://github.com/erictossell/nixflakes/blob/main/modules/virt/libvirt.nix
+# https://www.reddit.com/r/NixOS/comments/177wcyi/best_way_to_run_a_vm_on_nixos/
 
 { pkgs, username, home-manager, ... }:
 {
@@ -22,8 +23,8 @@
     spice-gtk
     spice-protocol
     virt-viewer
-    #virtio-win
-    #win-spice
+    virtio-win
+    win-spice
   ];
   programs.virt-manager.enable = true;
 
