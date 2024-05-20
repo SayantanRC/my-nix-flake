@@ -14,6 +14,8 @@
 # https://www.debugpoint.com/kvm-share-folder-windows-guest/
 # Virtiofsd (may be optional):
 # https://discourse.nixos.org/t/virt-manager-cannot-find-virtiofsd/26752
+# 6. Enable clipboard sharing (optional):
+# https://bbs.archlinux.org/viewtopic.php?pid=2167226#p2167226
 
 # More on share directory:
 # https://www.debugpoint.com/share-folder-virt-manager/
