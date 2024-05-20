@@ -21,6 +21,7 @@
     };
     spiceUSBRedirection.enable = true;
   };
+  services.spice-vdagentd.enable = true;
 
   users.users.${username}.extraGroups = [ "libvirtd" ];
 
@@ -28,7 +29,6 @@
     spice
     spice-gtk
     spice-protocol
-    spice-vdagent
     virt-viewer
     virtio-win
     win-spice
